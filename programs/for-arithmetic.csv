@@ -1,0 +1,10 @@
+pc@code@cyclecount@nextpc@meta
+ 1@int i = 0;                      @ 1@ 2                 @assign _i=0
+ 2@while (i < 5) {                 @ 1@ 3 if _i < 5 else 9@pass
+ 3@    int a = i + 1;              @ 1@ 4                 @pass
+ 4@    int b = a * 5;              @ 2@ 5                 @pass
+ 5@    int c = b * 2;              @ 1@ 6                 @pass
+ 6@    float d = c / 3.14f;        @ 5@ 7                 @pass
+ 7@    printf("%d := %f\n", i, d); @ 7@ 8                 @pass
+ 8@    i++;                        @ 1@ 2                 @assign _i=_i+1
+ 9@}                               @ 0@-1                 @exit

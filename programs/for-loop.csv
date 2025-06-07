@@ -1,0 +1,7 @@
+pc@code@cyclecount@nextpc@meta
+1@?                       @ 0@ 2                        @assign _counter=0
+2@for i in range(10):     @ 5@ 3 if _counter < 10 else 6@pass
+3@?                       @ 0@ 4                        @assign _counter=_counter+1
+4@    x = i + 1           @ 1@ 5                        @pass
+5@    print(x)            @10@ 2                        @pass
+6@?                       @ 0@-1                        @exit
